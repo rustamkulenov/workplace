@@ -1,0 +1,13 @@
+[Unit]
+Description=ansible devhost test for angular
+
+[Service]
+WorkingDirectory={{ project_path }}
+ExecStart=/usr/local/bin/ng serve
+Restart=always
+RestartSec=10  # Restart service after 10 seconds if dotnet service crashes
+SyslogIdentifier={{ project_name }}}
+User=root
+
+[Install]
+WantedBy=multi-user.target

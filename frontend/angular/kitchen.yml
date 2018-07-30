@@ -1,0 +1,40 @@
+---  
+# This is configuration file for test-kitchen.
+
+# How to execute:
+# $ kitchen create
+# $ kitchen converge
+# $ kitchen verify
+# $ kitchen test
+# $ kitchen destroy
+
+driver:
+  name: vagrant           # Plugin docs: https://github.com/test-kitchen/kitchen-vagrant
+
+provisioner:
+  name: ansible_playbook  # https://github.com/neillturner/kitchen-ansible
+  hosts: localhost
+  require_chef_for_busser: false
+  require_ansible_repo: true
+
+verifier:
+  name: serverspec        # https://github.com/neillturner/kitchen-verifier-serverspec
+
+platforms:                # Vagrant+VBox customizations: https://www.vagrantup.com/docs/virtualbox/configuration.html
+  #- name: ubuntu-16.04    # !!! Test failes on v16.04 at provision step !!!
+  #  driver:               
+  #    box: bento/ubuntu-16.04
+  #    gui: true           
+  - name: ubuntu-18.04
+    driver:               
+      box: bento/ubuntu-18.04
+      gui: true           
+
+suites:
+  - name: default
+    provisioner:
+      name: ansible_playbook
+      playbook: test/integration/default/default.yml
+    verifier:
+      patterns:
+      - roles/frontend-testplaybook/spec/angularcli_spec.rb

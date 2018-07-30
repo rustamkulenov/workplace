@@ -1,0 +1,17 @@
+Vagrant.require_version ">= 1.7.0"
+
+# This vagrantfile can be used for checking ansible playbooks
+# without tech-kitchen, i.e. without tests, just playbooks.
+
+Vagrant.configure(2) do |config|
+  # Boxes are from here: https://github.com/chef/bento
+  config.vm.box = "bento/ubuntu-18.04"
+
+  config.ssh.insert_key = false
+
+  config.vm.provision "ansible" do |ansible|
+    ansible.verbose = "v"
+    ansible.playbook = "playbook.yml"
+    ansible.raw_arguments = ["--become"]
+  end
+end

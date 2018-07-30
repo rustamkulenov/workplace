@@ -1,0 +1,6 @@
+---
+- name: Ensure angular CLI is installed
+  npm:
+      global: yes
+      state: present
+      name: '@angular/cli'

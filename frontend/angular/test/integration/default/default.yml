@@ -1,0 +1,5 @@
+--- # This playbook is used to provision test VM
+- hosts: localhost
+  roles: 
+    - frontend
+    - frontend-testplaybook   # Prepare VM for tests

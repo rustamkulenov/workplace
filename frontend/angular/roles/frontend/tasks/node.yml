@@ -1,0 +1,8 @@
+---
+- name: Ensure Nodejs and NPM are installed
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - nodejs
+    - npm

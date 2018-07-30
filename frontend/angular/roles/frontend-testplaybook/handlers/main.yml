@@ -1,0 +1,6 @@
+---
+  - name: Ensure service is restarted
+    listen: restart service
+    systemd:
+      name: "{{ project_name }}.service"
+      state: restarted

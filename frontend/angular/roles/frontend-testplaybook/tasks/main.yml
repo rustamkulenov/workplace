@@ -1,0 +1,23 @@
+--- 
+# Creates angularCLI web application and starts it in the background
+# runs webserver in a background on port 4200
+- name: Ensure destination folder exists
+  file:
+    path: "{{ project_path }}"
+    state: directory
+
+- name: Ensure new project is created
+  command: ng new {{ project_name }}
+  args:
+    chdir: /tmp
+    creates: "{{ project_path }}/angular.json"
+
+- name: Ensure is installed as deamon
+  template:
+    src: "{{ project_name }}.service.j2"
+    dest: "/etc/systemd/system/{{ project_name }}.service"
+
+- name: Ensure service is started
+  systemd:
+    name: "{{ project_name }}.service"
+    state: started
