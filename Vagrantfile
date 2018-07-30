@@ -9,6 +9,6 @@ Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/bionic64"
 
    config.vm.provision "shell", inline: <<-SHELL
-      curl -s "https://bitbucket.org/rkulenov/workplace/src/master/frontend/setup.sh" | bash -s
+      curl -s "https://bitbucket.org/rkulenov/workplace/raw/HEAD/frontend/setup.sh" | bash -s
    SHELL
 end
