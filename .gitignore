@@ -9,3 +9,4 @@ out.txt
 Gemfile.lock
 .kitchen
 .vagrant
+*.log
