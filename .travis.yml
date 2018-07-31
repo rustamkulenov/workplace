@@ -1,11 +1,12 @@
 language: ruby
-os:
-  - linux
+os: linux
+#dist: bionicbeaver
 sudo: enabled
 
 before_install:
   - sudo apt-get install software-properties-common
   - sudo apt-add-repository -y ppa:ansible/ansible
+  - sudo apt-get update
   - sudo apt-get install -y ansible
 
 script: curl -s "https://raw.githubusercontent.com/rustamkulenov/workplace/master/frontend/setup.sh" | sudo bash -s
