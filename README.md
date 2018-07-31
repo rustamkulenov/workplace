@@ -1,6 +1,6 @@
 # Workplaces
 
-Scripts to setup workplace (tools for frontend, DevOps development, etc)
+Scripts to setup workplace (tools for frontend, DevOps development, etc).
 Tested on:
 
 * ubuntu 18-04 LTS
@@ -26,5 +26,5 @@ How to install:
 ```
 2. Run as a root:
 ```
-    $ curl -s "https://bitbucket.org/rkulenov/workplace/raw/HEAD/frontend/setup.sh" | bash -s
+    curl -s "https://bitbucket.org/rkulenov/workplace/raw/HEAD/frontend/setup.sh" | bash -s
 ```
