@@ -14,12 +14,12 @@ Vagrant.configure("2") do |config|
       if ! [ -x "$(command -v ansible-playbook)" ]; then
         apt-get update
         apt-get install software-properties-common
-        apt-add-repository ppa:ansible/ansible
+        apt-add-repository -y ppa:ansible/ansible
         apt-get update
         apt-get install -y ansible
       fi
       
       # Setup frontend workplace
-      curl -s "https://bitbucket.org/rkulenov/workplace/raw/HEAD/frontend/setup.sh" | sudo bash -s
+      curl -s "https://raw.githubusercontent.com/rustamkulenov/workplace/master/frontend/setup.sh" | sudo bash -s
    SHELL
 end
