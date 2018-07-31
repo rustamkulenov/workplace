@@ -24,11 +24,11 @@ How to install:
     apt-get update
     apt-get install -y ansible
 ```
-2.1. Run as a root to install to localhost:
+2. Run as a root to install to localhost:
 ```
     curl -s "https://bitbucket.org/rkulenov/workplace/raw/HEAD/frontend/setup.sh" | bash -s
 ```
-2.2. Or, if you want to install to multiple machines, then run:
+Or, if you want to install to multiple machines, then run:
 ```
     git clone https://rkulenov@bitbucket.org/rkulenov/workplace.git
     cd workplace
