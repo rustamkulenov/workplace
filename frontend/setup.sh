@@ -5,7 +5,9 @@ if ! [ -x "$(command -v ansible-playbook)" ]; then
   exit 1
 fi
 
-cd $(mktemp -d)
+$MYTMPDIR=$(mktemp -d)
+trap "rm -rf $MYTMPDIR" EXIT
+cd $MYTMPDIR
 git clone https://rkulenov@bitbucket.org/rkulenov/workplace.git
 cd workplace
 ansible-playbook frontend/angular/playbook.yml -i localhost.inv -c local
