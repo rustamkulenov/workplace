@@ -1,0 +1,10 @@
+os:
+  - linux
+sudo: enabled
+
+before_install:
+  - sudo apt-get install software-properties-common
+  - sudo apt-add-repository ppa:ansible/ansible
+  - sudo apt-get install -y ansible
+
+  script: curl -s "https://bitbucket.org/rkulenov/workplace/raw/HEAD/frontend/setup.sh" | sudo bash -s

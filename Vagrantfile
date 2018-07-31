@@ -20,6 +20,6 @@ Vagrant.configure("2") do |config|
       fi
       
       # Setup frontend workplace
-      curl -s "https://bitbucket.org/rkulenov/workplace/raw/HEAD/frontend/setup.sh" | bash -s
+      curl -s "https://bitbucket.org/rkulenov/workplace/raw/HEAD/frontend/setup.sh" | sudo bash -s
    SHELL
 end
