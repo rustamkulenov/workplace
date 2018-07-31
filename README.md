@@ -26,7 +26,7 @@ How to install:
 ```
 2. Run as a root to install to localhost:
 ```
-    curl -s "https://bitbucket.org/rkulenov/workplace/raw/HEAD/frontend/setup.sh" | bash -s
+    curl -s "https://bitbucket.org/rkulenov/workplace/raw/HEAD/frontend/setup.sh" | sudo bash -s
 ```
 Or, if you want to install to multiple machines, then run:
 ```
@@ -35,3 +35,5 @@ Or, if you want to install to multiple machines, then run:
     ansible-playbook frontend/angular/playbook.yml -i <your_inventory_file>
 ```
 See [ansible documentation](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html) for inventory file format.
+
+![Angular development env is installed](images/install_frontend_angular.gif)
