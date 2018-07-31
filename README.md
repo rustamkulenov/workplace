@@ -26,11 +26,11 @@ How to install:
 ```
 2. Run as a root to install to localhost:
 ```
-    curl -s "https://bitbucket.org/rkulenov/workplace/raw/HEAD/frontend/setup.sh" | sudo bash -s
+    curl -s "https://raw.githubusercontent.com/rustamkulenov/workplace/master/frontend/setup.sh" | sudo bash -s
 ```
 Or, if you want to install to multiple machines, then run:
 ```
-    git clone https://rkulenov@bitbucket.org/rkulenov/workplace.git
+    git clone https://github.com/rustamkulenov/workplace.git
     cd workplace
     ansible-playbook frontend/angular/playbook.yml -i <your_inventory_file>
 ```

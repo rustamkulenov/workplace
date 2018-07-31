@@ -8,6 +8,6 @@ fi
 MYTMPDIR=$(mktemp -d)
 trap "rm -rf $MYTMPDIR" EXIT
 cd $MYTMPDIR
-git clone https://rkulenov@bitbucket.org/rkulenov/workplace.git
+git clone https://github.com/rustamkulenov/workplace.git
 cd workplace
 ansible-playbook frontend/angular/playbook.yml -i localhost.inv -c local
