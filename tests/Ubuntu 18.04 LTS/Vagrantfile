@@ -21,5 +21,7 @@ Vagrant.configure("2") do |config|
       
       # Setup frontend workplace
       curl -s "https://raw.githubusercontent.com/rustamkulenov/workplace/master/frontend/setup.sh" | sudo bash -s
+      # Setup devops workplace
+      curl -s "https://raw.githubusercontent.com/rustamkulenov/workplace/master/devops/setup.sh" | sudo bash -s
    SHELL
 end

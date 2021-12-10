@@ -1,0 +1,23 @@
+--- # https://learn.hashicorp.com/tutorials/terraform/install-cli
+- name: Ensure Terraform prerequisites are installed
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - gnupg
+    - software-properties-common
+    - curl
+
+- name: Add Hashicorp key
+  apt_key:
+    url: https://apt.releases.hashicorp.com/gpg 
+
+- name: Add Hashicorp repo
+  apt_repository:
+    repo: "deb [arch=amd64] https://apt.releases.hashicorp.com {{ ansible_distribution_release }} main"
+
+- name: Ensure Terraform is installed
+  apt:
+    name: terraform
+    update_cache: yes
+    state: present

@@ -1,0 +1,4 @@
+---  # Ansible playbook file for Vagrantfile
+- hosts: default
+  roles: 
+    - devops

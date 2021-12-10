@@ -8,6 +8,11 @@ See details on installing and configuring prerequisites [here](/bootstrap/README
 
 See details about testing [here](tests/README.md).
 
+Run playbooks locally:
+```bash
+$ ansible-playbook -c local -i default, playbook.yml
+```
+
 ## Frontend workplace
 
 The following toolset will be installed (if not installed yet):

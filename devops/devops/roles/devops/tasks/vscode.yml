@@ -1,0 +1,5 @@
+--- # https://code.visualstudio.com/docs/setup/linux
+- name: Ensure VSCode is installed
+  apt:
+    deb: https://go.microsoft.com/fwlink/?LinkID=760868
+  notify: install dependencies

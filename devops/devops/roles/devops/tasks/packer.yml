@@ -1,0 +1,7 @@
+--- 
+# https://learn.hashicorp.com/tutorials/packer/get-started-install-cli
+# Shall be run after Terraform installation to make sure that the Hashicorp key is installed
+- name: Ensure Packer is installed
+  apt:
+    name: packer
+    state: present
