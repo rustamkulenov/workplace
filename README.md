@@ -1,9 +1,12 @@
 # Workplaces
 
 Scripts to setup workplace (tools for frontend, DevOps development, etc).
-Tested on:
 
-* ubuntu 18-04 LTS
+## Developing, Testing, Running this repo
+
+See details on installing and configuring prerequisites [here](/bootstrap/README.md).
+
+See details about testing [here](tests/README.md).
 
 ## Frontend workplace
 
