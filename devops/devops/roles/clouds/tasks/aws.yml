@@ -1,0 +1,10 @@
+---
+# https://github.com/ansible-collections/community.docker/blob/main/plugins/modules/docker_image.py
+- name: Make sure AWS CLI image is downloaded
+  community.docker.docker_image:
+    name: amazon/aws-cli
+    source: pull
+
+# Make sure that you have aws alias for docker command for convenience:
+# https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-docker.html
+

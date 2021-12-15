@@ -1,0 +1,6 @@
+---
+- name: Make sure Azure CLI image is downloaded
+  community.docker.docker_image:
+    name: mcr.microsoft.com/azure-cli
+    source: pull
+
