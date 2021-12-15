@@ -1,0 +1,12 @@
+---
+# https://github.com/ansible-collections/community.docker/blob/main/plugins/modules/docker_image.py
+- name: Make sure AWS CLI image is downloaded
+  community.docker.docker_image:
+    name: amazon/aws-cli
+    source: pull
+
+- name: Make sure Azure CLI image is downloaded
+  community.docker.docker_image:
+    name: mcr.microsoft.com/azure-cli
+    source: pull
+

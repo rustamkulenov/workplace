@@ -1,0 +1,6 @@
+# Run the following to install galaxy roles:
+- hosts: default
+  roles: 
+    - prerequisites
+
+  

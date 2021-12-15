@@ -5,7 +5,8 @@ The following toolset will be installed (if not installed yet):
 * git
 * packer
 * terraform
-* aws cli, azure cli
+* docker
+* aws cli (via docker), azure cli (via docker)
 
 How to install:
 
@@ -25,6 +26,10 @@ Or, if you want to install to multiple machines, then run:
 ```
     git clone https://github.com/rustamkulenov/workplace.git
     cd workplace
-    ansible-playbook devops/devops/playbook.yml -i <your_inventory_file>
+    ansible-playbook -c local -i <your_inventory_file>, devops/devops/install-requirements.yml  -e 'ansible_python_interpreter=/usr/bin/python3'
+    ansible-playbook devops/devops/playbook.yml -i <your_inventory_file>  -e 'ansible_python_interpreter=/usr/bin/python3'
 ```
+
+Python3 is required to run the playbook. There is a dependency on Docker SDK for Python3. Optionaly, you can [confiigure Python3](https://docs.ansible.com/ansible/latest/reference_appendices/python_3_support.html) interpreter in your inventory file.
+
 See [ansible documentation](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html) for inventory file format.

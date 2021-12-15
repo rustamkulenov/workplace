@@ -3,3 +3,4 @@
 - include: vscode.yml
 - include: terraform.yml
 - include: packer.yml
+- include: py3.yml

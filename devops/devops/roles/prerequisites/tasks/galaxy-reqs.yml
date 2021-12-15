@@ -1,0 +1,7 @@
+---
+# Custom location of roles skips collections installation
+- name: install ansible galaxy Roles
+  local_action: command ansible-galaxy install -r requirements.yml --roles-path roles
+
+- name: install ansible galaxy Collections
+  local_action: command ansible-galaxy collection install -r requirements.yml

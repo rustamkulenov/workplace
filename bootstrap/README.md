@@ -8,6 +8,8 @@ The following tools are required/used to develop, test, run this repo:
 |--                 |--|
 | Ubuntu            | 20.04.3 LTS |
 | git               | 2.25.1 |
+| Python3           | 3.8.10 |
+| pip3              | 20.0.2 |
 | ansible           | 2.11.7 |
 | ansible-playbook  | 2.11.7 |
 | vagrant           | 2.2.19 |

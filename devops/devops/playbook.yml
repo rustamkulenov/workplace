@@ -1,4 +1,10 @@
----  # Ansible playbook file for Vagrantfile
+---  
+# Ansible playbook file for DevOps roles.
 - hosts: default
+  vars:
+    docker__edition: "ce" # See https://galaxy.ansible.com/nickjj/docker
   roles: 
     - devops
+    - nickjj.docker
+    - clouds
+    

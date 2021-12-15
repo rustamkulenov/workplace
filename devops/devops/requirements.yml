@@ -1,0 +1,12 @@
+# A requirements file for ansible-galaxy
+# Run the following to install roles and collections:
+# $ ansible-galaxy install -r requirements.yml
+# See https://docs.ansible.com/ansible/latest/galaxy/user_guide.html#installing-roles-from-galaxy
+
+roles:
+  # https://galaxy.ansible.com/nickjj/docker
+  - name: nickjj.docker 
+
+collections:
+  # https://galaxy.ansible.com/community/docker
+  - name: community.docker

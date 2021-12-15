@@ -10,3 +10,7 @@ Gemfile.lock
 .kitchen
 .vagrant
 *.log
+
+# List ansible-galaxy installed roles here:
+
+**/roles/nickjj.docker

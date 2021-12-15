@@ -1,0 +1,5 @@
+---
+# Required Python3 modules
+- name: Make sure Docker SDK for Python3 is installed
+  pip:
+    name: docker
