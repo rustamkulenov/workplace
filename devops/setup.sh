@@ -21,6 +21,6 @@ cd $MYTMPDIR
 git clone https://github.com/rustamkulenov/workplace.git
 cd workplace
 # Install Ansible-galaxy prerequisites
-ansible-playbook -c local -i localhost.inv, devops/devops/install-requirements.yml  -e 'ansible_python_interpreter=/usr/bin/python3'
+ansible-playbook -c local -i localhost.inv devops/devops/install-requirements.yml  -e 'ansible_python_interpreter=/usr/bin/python3'
 # Run DevOps playbook
 ansible-playbook devops/devops/playbook.yml -i localhost.inv -c local -e 'ansible_python_interpreter=/usr/bin/python3'
