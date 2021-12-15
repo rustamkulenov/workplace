@@ -6,12 +6,12 @@ if ! [ -x "$(command -v ansible-playbook)" ]; then
 fi
 
 if ! [ -x "$(command -v python3)" ]; then
-  echo 'Error: ansible is not installed.' >&2
+  echo 'Error: python3 is not installed.' >&2
   exit 1
 fi
 
 if ! [ -x "$(command -v pip3)" ]; then
-  echo 'Error: ansible is not installed.' >&2
+  echo 'Error: pip3 is not installed.' >&2
   exit 1
 fi
 
