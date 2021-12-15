@@ -8,25 +8,10 @@ Vagrant.configure("2") do |config|
   
   config.vm.box = "ubuntu/bionic64"
 
-   config.vm.provision "shell", inline: <<-SHELL
-
-      # Install ansible
-      if ! [ -x "$(command -v ansible-playbook)" ]; then
-        apt-get update
-        apt-get install software-properties-common
-        apt-add-repository -y ppa:ansible/ansible
-        apt-get update
-        apt-get install -y ansible
-      fi
-      
-      # Install Pip3
-      if ! [ -x "$(command -v pip3)" ]; then
-        apt-get install -y python3-pip
-      fi
-      
-      # Setup frontend workplace
-      #curl -s "https://raw.githubusercontent.com/rustamkulenov/workplace/master/frontend/setup.sh" | sudo bash -s
-      # Setup devops workplace
-      curl -s "https://raw.githubusercontent.com/rustamkulenov/workplace/master/devops/setup.sh" | sudo bash -s
-   SHELL
+  config.vm.provision "shell", inline: <<-SHELL
+    # Setup frontend workplace
+    curl -s "https://raw.githubusercontent.com/rustamkulenov/workplace/master/frontend/setup.sh" | sudo bash -s
+    # Setup devops workplace
+    curl -s "https://raw.githubusercontent.com/rustamkulenov/workplace/master/devops/setup.sh" | sudo bash -s
+  SHELL
 end

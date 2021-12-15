@@ -1,8 +1,13 @@
 #!/bin/sh
 
+apt-get update
+apt-get install software-properties-common
+
 if ! [ -x "$(command -v ansible-playbook)" ]; then
-  echo 'Error: ansible is not installed.' >&2
-  exit 1
+  echo 'Installing ansible...'
+  apt-add-repository -y ppa:ansible/ansible
+  apt-get update
+  apt-get install -y ansible
 fi
 
 MYTMPDIR=$(mktemp -d)
