@@ -1,5 +1,11 @@
 --- # https://code.visualstudio.com/docs/setup/linux
+- name: Check if code file exists.
+  stat:
+    path: /usr/bin/code
+  register: p
+
 - name: Ensure VSCode is installed
   apt:
     deb: https://go.microsoft.com/fwlink/?LinkID=760868
   notify: install dependencies
+  when: p.stat.exists == False
