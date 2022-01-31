@@ -1,8 +1,8 @@
 ---
-- include: git.yml
-- include: vscode.yml
-- include: terraform.yml
-- include: packer.yml
-- include: py3.yml
-- include: helm3.yml
-- include: kubectl.yml
+- include_tasks: git.yml
+- include_tasks: vscode.yml
+- include_tasks: terraform.yml
+- include_tasks: packer.yml
+- include_tasks: py3.yml
+- include_tasks: helm3.yml
+- include_tasks: kubectl.yml

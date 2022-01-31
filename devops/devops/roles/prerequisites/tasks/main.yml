@@ -1,2 +1,2 @@
 ---
-- include: galaxy-reqs.yml
+- include_tasks: galaxy-reqs.yml

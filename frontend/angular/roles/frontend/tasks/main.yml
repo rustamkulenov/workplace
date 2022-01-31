@@ -1,5 +1,5 @@
 ---
-- include: git.yml
-- include: node.yml
-- include: ngcli.yml
-- include: vscode.yml
+- include_tasks: git.yml
+- include_tasks: node.yml
+- include_tasks: ngcli.yml
+- include_tasks: vscode.yml

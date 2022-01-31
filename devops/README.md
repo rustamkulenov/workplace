@@ -2,13 +2,17 @@
 
 The following toolset will be installed (if not installed yet):
 
-* git
+* git    
 * packer
 * terraform
 * docker
 * aws cli (via docker), azure cli (via docker)
 * kubectl
 * helm3
+
+| Ubuntu 18.04   | Ubuntu 20.04   |
+|- |- |
+| Fails on Terraform | Success |
 
 ## How to provision
 
