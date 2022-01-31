@@ -11,10 +11,11 @@
 - name: Add Kubectl repo key
   apt_key:
     url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+    keyring: /etc/apt/trusted.gpg.d/k8s.gpg
 
 - name: Add Kubectl repo
   apt_repository:
-    repo: "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main"
+    repo: "deb [signed-by=/etc/apt/trusted.gpg.d/k8s.gpg] https://apt.kubernetes.io/ kubernetes-xenial main"
 
 - name: Ensure Kubectl is installed
   apt:
