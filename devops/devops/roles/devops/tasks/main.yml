@@ -4,3 +4,5 @@
 - include: terraform.yml
 - include: packer.yml
 - include: py3.yml
+- include: helm3.yml
+- include: kubectl.yml

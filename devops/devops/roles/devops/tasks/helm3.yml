@@ -1,0 +1,21 @@
+--- # https://helm.sh/docs/intro/install/#from-apt-debianubuntu
+- name: Ensure Helm prerequisites are installed
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - apt-transport-https
+
+- name: Add Helm repo key
+  apt_key:
+    url: https://baltocdn.com/helm/signing.asc 
+
+- name: Add Helm repo
+  apt_repository:
+    repo: "deb https://baltocdn.com/helm/stable/debian/ all main"
+
+- name: Ensure Helm3 is installed
+  apt:
+    name: helm
+    update_cache: yes
+    state: present

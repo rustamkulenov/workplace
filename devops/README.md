@@ -7,6 +7,8 @@ The following toolset will be installed (if not installed yet):
 * terraform
 * docker
 * aws cli (via docker), azure cli (via docker)
+* kubectl
+* helm3
 
 ## How to provision
 
